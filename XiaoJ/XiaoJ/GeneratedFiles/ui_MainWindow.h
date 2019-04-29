@@ -87,6 +87,7 @@ public:
         MainWindowClass->setStatusBar(statusBar);
 
         retranslateUi(MainWindowClass);
+        QObject::connect(pushButton, SIGNAL(clicked(bool)), MainWindowClass, SLOT(sendText()));
 
         QMetaObject::connectSlotsByName(MainWindowClass);
     } // setupUi
